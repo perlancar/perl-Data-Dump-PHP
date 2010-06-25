@@ -1,5 +1,11 @@
 Revision history for Data-Dump-PHP
 
+0.04   2010-04-14
+
+       - Add flag ($Data::Dump::PHP::USE_LAMBDA, default 0) to output
+         PHP 5.3 code (which uses lambda function instead of the ugly
+         create_function()).
+
 0.03   2010-04-14
 
        - Fixed typos in POD.

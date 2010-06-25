@@ -3,6 +3,12 @@ use strict;
 use vars qw(@EXPORT @EXPORT_OK $VERSION $DEBUG);
 use subs qq(dump);
 
+# to make Test::Pod::Coverage happy
+
+=for Pod::Coverage .*
+
+=cut
+
 require Exporter;
 *import = \&Exporter::import;
 @EXPORT = qw(dd_php ddx_php);
