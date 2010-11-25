@@ -1,6 +1,6 @@
 package Data::Dump::PHP;
 use strict;
-use vars qw(@EXPORT @EXPORT_OK $VERSION $DEBUG);
+use vars qw(@EXPORT @EXPORT_OK $DEBUG);
 use subs qq(dump);
 
 # to make Test::Pod::Coverage happy
@@ -14,7 +14,6 @@ require Exporter;
 @EXPORT = qw(dd_php ddx_php);
 @EXPORT_OK = qw(dump_php pp_php quote_php);
 
-$VERSION = 0.02;
 $DEBUG = 0;
 
 use overload ();
