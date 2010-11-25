@@ -467,13 +467,11 @@ sub str {
 }
 
 my %esc = (
-    "\a" => "\\a",
-    "\b" => "\\b",
     "\t" => "\\t",
     "\n" => "\\n",
     "\f" => "\\f",
     "\r" => "\\r",
-    "\e" => "\\e",
+    "\x0b" => "\\v",
 );
 
 # put a string value in double quotes
@@ -483,7 +481,7 @@ sub quote {
   s/([\\\"\@\$])/\\$1/g;
   return qq("$_") unless /[^\040-\176]/;  # fast exit
 
-  s/([\a\b\t\n\f\r\e])/$esc{$1}/g;
+  s/([\t\n\f\r\x0b])/$esc{$1}/g;
 
   # no need for 3 digits in escape for these
   s/([\0-\037])(?!\d)/sprintf('\\%o',ord($1))/eg;

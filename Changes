@@ -1,5 +1,9 @@
 Revision history for Data-Dump-PHP
 
+0.06   2010-11-25
+
+       - Fix PHP escape sequence (PHP doesn't have \a, \b, \e but has \v)
+
 0.05   2010-11-03
 
        - (apply Data::Dump change) Deal with the perl-5.13 (?^:...) regex
