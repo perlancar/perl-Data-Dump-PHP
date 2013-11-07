@@ -10,6 +10,8 @@ package Data::Dump::PHP::Trace;
 #   - show nested calls sensibly
 #   - time calls
 
+# VERSION
+
 use strict;
 
 use base 'Exporter';
@@ -268,12 +270,7 @@ sub errno {
 }
 
 1;
-
-__END__
-
-=head1 NAME
-
-Data::Dump::PHP::Trace - Helpers to trace function and method calls
+# ABSTRACT: Helpers to trace function and method calls
 
 =head1 SYNOPSIS
 
@@ -400,12 +397,5 @@ traced.
 L<Data::Dump::PHP>
 
 L<Data::Dump::Trace>
-
-=head1 AUTHOR
-
-Copyright 2010 Steven Haryanto.
-
-This library is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.
 
 =cut

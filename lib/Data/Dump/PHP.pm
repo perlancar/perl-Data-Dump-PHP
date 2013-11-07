@@ -3,11 +3,7 @@ use strict;
 use vars qw(@EXPORT @EXPORT_OK $DEBUG);
 use subs qq(dump);
 
-# to make Test::Pod::Coverage happy
-
-=for Pod::Coverage .*
-
-=cut
+# VERSION
 
 require Exporter;
 *import = \&Exporter::import;
@@ -494,12 +490,7 @@ sub quote {
 *quote_php = \&quote;
 
 1;
-
-__END__
-
-=head1 NAME
-
-Data::Dump::PHP - Pretty printing of data structures as PHP code
+# ABSTRACT: Pretty printing of data structures as PHP code
 
 =head1 SYNOPSIS
 
@@ -629,19 +620,5 @@ PHP serialization format.
 Data::Dump::PHP is a quick hack (as I needed it for
 L<Data::Schema::Emitter::PHP>). I simply copied the code from Gisle
 Ass' wonderful C<Data::Dump> and changed only whatever is necessary.
-
-=head1 AUTHORS
-
-The C<Data::Dump::PHP> module is written by Steven Haryanto
-<stevenharyanto@gmail.com>, based on C<Data::Dump> by Gisle Aas
-<gisle@aas.no>, based on C<Data::Dumper> by Gurusamy Sarathy
-<gsar@umich.edu>.
-
- Copyright 2010 Steven Haryanto.
- Copyright 1998-2000,2003-2004,2008 Gisle Aas.
- Copyright 1996-1998 Gurusamy Sarathy.
-
-This library is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.
 
 =cut
