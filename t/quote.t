@@ -35,4 +35,4 @@ ok(quote_php('"'), qq("\\""));
 ok(quote_php("\0" x 1024), join("", '"', ("\\0") x 1024, '"'));
 
 # php-specific tests
-ok(quote_php("\a\b\e\f\n\r\t\x0b"), "\"\\7\\10\\33\\f\\n\\r\\t\\v\"");
+ok(quote_php("\a\b\e\f\n\r\t\x0b\@"), "\"\\7\\10\\33\\f\\n\\r\\t\\v\@\"");

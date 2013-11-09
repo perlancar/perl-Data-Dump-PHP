@@ -473,7 +473,7 @@ my %esc = (
 sub quote {
   local($_) = $_[0];
   # If there are many '"' we might want to use qq() instead
-  s/([\\\"\@\$])/\\$1/g;
+  s/([\\\"\$])/\\$1/g;
   return qq("$_") unless /[^\040-\176]/;  # fast exit
 
   s/([\t\n\f\r\x0b])/$esc{$1}/g;
