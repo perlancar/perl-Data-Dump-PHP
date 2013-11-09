@@ -464,9 +464,9 @@ sub str {
 my %esc = (
     "\t" => "\\t",
     "\n" => "\\n",
-    "\f" => "\\f",
+    "\f" => "\\014", # \f only since 5.2.5
     "\r" => "\\r",
-    "\x0b" => "\\v",
+    "\x0b" => "\\013", # \v only since 5.2.5
 );
 
 # put a string value in double quotes
