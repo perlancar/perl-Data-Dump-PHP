@@ -1,5 +1,16 @@
 Revision history for Data-Dump-PHP
 
+0.10     2013-11-09 (SHARYANTO)
+
+         [BUG FIXES]
+
+         - No longer escape "@" as "\@" like in Perl, since it causes backslash
+           to be printed (suggested by Darren Embry).
+
+         - No longer escapes "\013" as "\v" and "\014" as "\f" since they are
+           recognized only since PHP 5.2.5 (suggested by Darren Embry).
+
+
 0.09     2013-11-07 (SHARYANTO)
 
          - No functional changes. Rebuild to test MetaCPAN indexing (previous
